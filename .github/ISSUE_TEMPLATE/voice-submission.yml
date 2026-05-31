@@ -1,0 +1,49 @@
+name: "🎤 Submit a recorded voice"
+description: Share a recorded reference clip (audio) for cloning.
+title: "[voice] "
+labels: ["submission", "voice"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **recorded voice** is an audio reference clip. **Drag-and-drop your
+        WAV file into this issue** (GitHub attaches it). A maintainer will move
+        it to a Release and add it to the manifest.
+        **Privacy:** only submit your own voice or one you have permission to share.
+  - type: input
+    id: name
+    attributes:
+      label: Voice name
+    validations:
+      required: true
+  - type: dropdown
+    id: use_case
+    attributes:
+      label: Use case
+      options: [narration, conversational, characters, social, entertainment, advertisement, informative]
+    validations:
+      required: true
+  - type: textarea
+    id: ref_text
+    attributes:
+      label: Spoken text (exact words in the clip)
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: "CC-BY-4.0"
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Confirmation
+      options:
+        - label: This is my own voice, or I have explicit permission from the speaker.
+          required: true
+        - label: This clip does not impersonate an identifiable real person without consent.
+          required: true
+        - label: I attached the audio file (3–15s, clean WAV) to this issue.
+          required: true

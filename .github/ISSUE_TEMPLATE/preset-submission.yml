@@ -1,0 +1,48 @@
+name: "🎨 Submit a preset (designed voice)"
+description: Share a designed voice defined by taxonomy tokens (no audio).
+title: "[preset] "
+labels: ["submission", "preset"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! A **preset** is a designed voice — just a
+        validated `instruct` string, no audio.
+        **Rule:** no cloning identifiable real people without consent.
+  - type: input
+    id: name
+    attributes:
+      label: Voice name
+      placeholder: "Calm Evening Narrator"
+    validations:
+      required: true
+  - type: dropdown
+    id: use_case
+    attributes:
+      label: Use case
+      options: [narration, conversational, characters, social, entertainment, advertisement, informative]
+    validations:
+      required: true
+  - type: input
+    id: instruct
+    attributes:
+      label: Instruct (taxonomy tokens only)
+      description: "e.g. female, middle-aged, low pitch, british accent"
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: "CC-BY-4.0"
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Confirmation
+      options:
+        - label: This voice does not imitate an identifiable real person without their consent.
+          required: true
+        - label: I have the right to license this contribution.
+          required: true
