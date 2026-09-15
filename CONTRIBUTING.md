@@ -1,4 +1,4 @@
-# Contributing to the OmniVoice Gallery
+# Contributing to the VoiceStudio Gallery
 
 Thanks for helping build the community voice library! There are two kinds of
 contributions: **presets** (designed voices) and **voices** (recorded clips).
@@ -16,7 +16,7 @@ Every item must declare a `license` you have the right to grant.
 
 ## Option A — submit from inside the app (easiest)
 
-In OmniVoice → **Gallery → Submit to gallery**. The app pre-fills an issue here
+In VoiceStudio → **Gallery → Submit to gallery**. The app pre-fills an issue here
 with the metadata (and, for designed voices, the validated `instruct`). Review
 it and click submit. A maintainer curates it into `manifest.json`.
 
